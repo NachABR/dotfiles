@@ -1,12 +1,12 @@
-# Dotfiles Setup Script
+# Dotfiles setup script
 
-This Bash script sets up dotfiles, including configurations for Zsh, Powerlevel10k, and various tools. Follow these steps:
+This bash script sets up dotfiles, including configurations for Zsh, Powerlevel10k, and various tools. Follow these steps:
 
 1. Clone repository and make the script executable:
    ```shell
    git clone https://github.com/NachABR/dotfiles.git
    cd dotfiles
-   chmod +x install.sh
+   chmod +wx install.sh
    ```
 
 2. Run the script:

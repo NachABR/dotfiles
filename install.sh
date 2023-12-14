@@ -71,10 +71,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &> /dev/null
 # Install auto suggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &> /dev/null
 
-# Install nvchad
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-# TODO: set nvchad custom config
-
 # Set Zsh as the default shell
 if package_installed lchsh; then
   echo -e -n "$(which zsh)\n" | sudo lchsh $(whoami)
@@ -87,4 +83,5 @@ fi
 
 echo "${bold}${blue}Run \"p10k configure\" to change the Powerlevel10k prompt configuration.${reset}"
 echo "${bold}${green}Installation completed.${reset}"
+
 zsh
