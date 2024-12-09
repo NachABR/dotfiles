@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 workdir=$(dirname "$0")
 
 # ANSI escape codes for text formatting
@@ -65,14 +67,14 @@ done
 [[ ! $no_interactive ]] && interactive_confirmation
 
 # List of packages to install
-packages=(gcc git neovim wget zsh nodejs unzip)
+packages=(gcc git neovim wget zsh unzip fastfetch lsd)
 
 # Install packages
 install_packages "${packages[@]}"
 
 # Install Oh My Zsh
 [[ $overwrite ]] && rm -rf "$ZSH"
-echo -e -n Hello World! | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh 2>/dev/null) --unattended"
+echo -e -n | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh 2>/dev/null) --unattended"
 
 # Install Powerlevel10k theme for Oh My Zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k &> /dev/null

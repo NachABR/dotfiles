@@ -7,7 +7,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -24,14 +24,14 @@ zstyle ':omz:update' frequency 13
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# COMPLETION_WAITING_DOTS="%F{green}Cargando...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
@@ -57,7 +57,7 @@ plugins=(
     common-aliases
     docker
     docker-compose
-    docker-machine
+    #docker-machine
     emoji
     gh
     gitignore
@@ -68,7 +68,7 @@ plugins=(
     pyenv
     pylint
     python
-    ssh-agent
+    #ssh-agent
     sudo
     virtualenv
     vscode
@@ -87,6 +87,7 @@ export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias ls="lsd"
 
 # Powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
