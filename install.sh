@@ -67,7 +67,7 @@ done
 [[ ! $no_interactive ]] && interactive_confirmation
 
 # List of packages to install
-packages=(gcc git neovim wget zsh unzip fastfetch lsd)
+packages=(gcc git neovim wget zsh unzip fastfetch)
 
 # Install packages
 install_packages "${packages[@]}"
