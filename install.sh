@@ -1,6 +1,4 @@
 #!/bin/bash
-set -e
-
 workdir=$(dirname "$0")
 
 # ANSI escape codes for text formatting
